@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狮子奖学金 Lion Scholarship</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom font if desired, fallback to system fonts matching React's font-sans */
+        body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+        .font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+    </style>
+</head>
+<body class="min-h-screen bg-[#FDFBF7] text-[#4A3B32] selection:bg-[#4C7B36] selection:text-white transition-colors duration-300">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-[#F4ECD8] border-b border-[#E8DCC4] shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-serif font-bold text-xl flex items-center gap-2 text-[#4C7B36]">
+                <span class="text-2xl">🦁</span> <span data-i18n="navTitle">狮子奖学金</span>
+            </div>
+            <div class="flex gap-4 sm:gap-6 items-center">
+                <button id="langToggleBtn" class="text-[#4C7B36] font-bold px-3 py-1.5 rounded-full hover:bg-white/50 transition-colors border-2 border-[#4C7B36] flex items-center gap-2 text-sm uppercase tracking-widest">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <span id="langLabel">EN</span>
+                </button>
+                <a href="#support" class="text-white bg-[#4C7B36] hover:bg-[#3d632b] px-5 py-2 rounded-full font-bold transition-colors flex items-center gap-2 shadow-sm text-sm sm:text-base">
+                    <i data-lucide="heart" class="w-[18px] h-[18px]"></i> 
+                    <span class="hidden sm:inline" data-i18n="supportBtn">支持我们</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="bg-[#F4ECD8] border-b border-[#E8DCC4] py-16 px-6 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2 bg-[#4C7B36]"></div>
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-4xl">🦁</span>
+                <span class="text-sm font-bold tracking-widest uppercase text-[#4C7B36]" data-i18n="heroInitiative">HWF栖息地守望者基金会倡议</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
+                <span data-i18n="heroTitle">“狮子奖学金”项目</span>
+                <span class="block text-2xl md:text-3xl mt-3 font-normal text-[#7A6354]" data-i18n="heroSubtitle">Lion Scholarship Initiative</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-serif italic mb-8 max-w-3xl text-[#5A4B42] border-l-4 border-[#C93B2B] pl-4 leading-relaxed">
+                <span data-i18n="heroQuote">“让每一个孩子像狮子一样勇敢成长，以能力承担责任，以责任守护世界。”</span>
+                <span class="block text-lg mt-2 text-[#7A6354]" data-i18n="heroQuoteSub">— From the Mara, for the future of the Earth.</span>
+            </p>
+            <div class="flex flex-wrap gap-4 text-sm">
+                <div class="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full shadow-sm">
+                    <i data-lucide="users" class="w-4 h-4 text-[#4C7B36]"></i>
+                    <span class="font-semibold" data-i18n="founders">发起人:</span> 
+                    <span data-i18n="founderNames">星巴 (Simba), 曹筱玲, Ashley Qu, Simon Masago, 陈雪景</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-6 py-16 space-y-20">
+        
+        <!-- Section: Maasai Mara Introduction -->
+        <section class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-[#E8DCC4]">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="map-pin" class="text-[#C93B2B] w-8 h-8"></i>
+                <h2 class="text-2xl md:text-3xl font-serif font-bold leading-snug" data-i18n="maraTitle">走近马赛马拉：生态奇迹与人文发展的交汇</h2>
+            </div>
+            <div class="w-12 h-1 bg-[#C93B2B] mb-8"></div>
+            
+            <div class="grid md:grid-cols-2 gap-10 text-[#4A3B32]">
+                <div class="space-y-5 text-lg leading-relaxed">
+                    <p data-i18n="maraP1">马赛马拉（Maasai Mara）位于肯尼亚西南部，包括马赛马拉国家保护区和周边的私人保护区，是全球最具标志性的草原生态系统，也是地球上大型哺乳动物最集中的栖息地。这里不仅是壮观的“动物大迁徙”的舞台，更生息着包括非洲狮、大象、黑犀牛在内的大量旗舰物种和濒危生命。</p>
+                    <p data-i18n="maraP2">然而，马赛马拉不仅属于野生动物，也是马赛人（Maasai）世代繁衍生息的家园。这个古老的游牧民族身披标志性的红色披风，有着深厚的自然敬畏之心，几百年来与这片大草原上的野生动物保持着微妙的共存关系。</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-[#F4ECD8] border border-[#E8DCC4]">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-[#4C7B36] leading-snug">
+                        <i data-lucide="shield-check" class="w-6 h-6 flex-shrink-0"></i>
+                        <span data-i18n="maraChalTitle">保护与发展的现实挑战</span>
+                    </h3>
+                    <p class="text-[#5A4B42] leading-relaxed mb-4" data-i18n="maraChalP1">
+                        随着现代化的冲击、气候变化以及人口的快速增长，人地矛盾与人兽冲突（Human-Wildlife Conflict）日益凸显。许多马赛家庭面临着极大的生存与经济压力。要实现真正的生态可持续，单纯的“圈地保护”已不再适用。
+                    </p>
+                    <p class="text-[#5A4B42] leading-relaxed font-semibold" data-i18n="maraChalP2">
+                        唯有通过教育赋权，提升当地社区特别是下一代的知识水平与生存技能，才能从根本上打破贫困，让原住民成为这片土地最坚定的守护者。这也正是“狮子奖学金”扎根于此的初衷。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Background -->
+        <section class="grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-4">
+                <h2 class="text-3xl font-serif font-bold mb-4 sticky top-24 leading-snug" data-i18n="bgTitle">项目背景与设立意义</h2>
+                <div class="w-12 h-1 bg-[#4C7B36] mb-6"></div>
+            </div>
+            <div class="md:col-span-8 prose prose-lg prose-stone text-[#4A3B32]">
+                <p class="text-xl leading-relaxed mb-4" data-i18n="bgP1">在马赛马拉这一全球最具生物多样性的生态系统之一，野生动物保护与社区发展始终呈现高度耦合关系。</p>
+                <p class="mb-4">
+                    <span data-i18n="bgP2">大量学术研究表明，教育水平的提升，尤其是女性教育的普及，是降低贫困、改善公共健康及促进生态保护的关键因素。</span>
+                    <cite class="text-sm ml-1 text-[#7A6354] block mt-1">(Herz & Sperling, 2004, What Works in Girls’ Education；UNESCO, 2014)</cite>
+                </p>
+                <p class="mb-8" data-i18n="bgP3">然而，在马赛社区，受限于经济条件与传统观念，许多具备学习潜力的儿童（尤其是女学生）仍然面临辍学风险。同时，女性教师在乡村教育体系中的比例不足，进一步限制了教育质量与性别平等的发展。在此背景下，“狮子奖学金”项目应运而生。</p>
+                
+                <div class="mt-8 p-6 rounded-xl bg-[#F4ECD8] border border-[#E8DCC4]">
+                    <h3 class="text-xl font-bold mb-6 flex items-start gap-2 leading-snug text-[#4A3B32]">
+                        <i data-lucide="globe" class="w-6 h-6 flex-shrink-0 mt-1 text-[#4C7B36]"></i>
+                        <span data-i18n="sdgTitle">对应联合国可持续发展目标 (SDGs) 的详细路径</span>
+                    </h3>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <!-- SDG 4 -->
+                        <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
+                            <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
+                                <span>SDG 4</span>
+                                <span class="text-[#7A6354] text-sm" data-i18n="sdg4_sub">优质教育</span>
+                            </div>
+                            <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg4">项目核心抓手，通过为贫困但品学兼优的学生提供经济资助，提升马赛社区基础与中等教育的公平与质量。</p>
+                        </div>
+                        <!-- SDG 5 -->
+                        <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
+                            <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
+                                <span>SDG 5</span>
+                                <span class="text-[#7A6354] text-sm" data-i18n="sdg5_sub">性别平等</span>
+                            </div>
+                            <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg5">重点倾斜资助女学生，并积极支持女性教师就业，全面提升当地女性的赋权水平与社会经济地位。</p>
+                        </div>
+                        <!-- SDG 1 -->
+                        <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
+                            <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
+                                <span>SDG 1</span>
+                                <span class="text-[#7A6354] text-sm" data-i18n="sdg1_sub">无贫穷</span>
+                            </div>
+                            <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg1">通过优质教育显著改善当地年轻人的长期收入能力，从根本上打破贫困的代际传递，间接促进减贫。</p>
+                        </div>
+                        <!-- SDG 15 -->
+                        <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
+                            <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
+                                <span>SDG 15</span>
+                                <span class="text-[#7A6354] text-sm" data-i18n="sdg15_sub">陆地生物</span>
+                            </div>
+                            <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg15">将生态环保理念融入教育体系，培养社区保护意识，直接支持马赛马拉生态系统与野生动物的保护目标。</p>
+                        </div>
+                        <!-- SDG 13 -->
+                        <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
+                            <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
+                                <span>SDG 13</span>
+                                <span class="text-[#7A6354] text-sm" data-i18n="sdg13_sub">气候行动</span>
+                            </div>
+                            <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg13">通过长期的生态保护教育，增强下一代对自然环境的理解，从而提升应对气候变化的认知与行动能力。</p>
+                        </div>
+                        <!-- SDG 17 -->
+                        <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
+                            <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
+                                <span>SDG 17</span>
+                                <span class="text-[#7A6354] text-sm" data-i18n="sdg17_sub">伙伴关系</span>
+                            </div>
+                            <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg17">依托全球合作网络，凝聚全球华人社区等多方力量，共同打造跨国界的生态与社会协同保护机制。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Vision & Objectives -->
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold mb-4" data-i18n="visionTitle">项目愿景与目标</h2>
+                <div class="w-12 h-1 bg-[#4C7B36] mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto text-lg leading-relaxed" data-i18n="visionDesc">
+                    以“狮子”为精神象征，培育下一代具有责任感、知识能力与生态意识的青年守护者，使教育成为连接社区发展与野生动物保护的核心桥梁。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Obj 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-[#E8DCC4] hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-full bg-[#F4ECD8] flex items-center justify-center mb-6">
+                        <i data-lucide="graduation-cap" class="text-[#4C7B36] w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="obj1Title">1. 教育支持</h3>
+                    <p class="text-[#7A6354] leading-relaxed" data-i18n="obj1Desc">为家境贫困但品行端正、热爱学习的学生提供持续性的经济资助，重点支持女学生完成基础与中等教育。</p>
+                </div>
+                <!-- Obj 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-[#E8DCC4] hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-full bg-[#F4ECD8] flex items-center justify-center mb-6">
+                        <i data-lucide="heart" class="text-[#4C7B36] w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="obj2Title">2. 女性赋权</h3>
+                    <p class="text-[#7A6354] leading-relaxed" data-i18n="obj2Desc">通过资助符合条件的女性教师就业，提升乡村教育体系质量，同时增强女性在社区中的社会与经济地位。</p>
+                </div>
+                <!-- Obj 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-[#E8DCC4] hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 rounded-full bg-[#F4ECD8] flex items-center justify-center mb-6">
+                        <i data-lucide="tree-pine" class="text-[#4C7B36] w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="obj3Title">3. 生态意识培养</h3>
+                    <p class="text-[#7A6354] leading-relaxed" data-i18n="obj3Desc">将野生动物保护理念融入教育体系，培养学生对自然环境的理解与责任感，形成长期的保护文化。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Eligibility & Selection -->
+        <section class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-serif font-bold mb-4" data-i18n="eligTitle">资助对象与评选标准</h2>
+                <div class="w-12 h-1 bg-[#4C7B36] mb-8"></div>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-[#4C7B36]">
+                            <i data-lucide="target" class="w-5 h-5"></i> 
+                            <span data-i18n="eligStudent">学生资助对象</span>
+                        </h3>
+                        <ul class="space-y-3" id="eligStudentListContainer">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-[#4C7B36]">
+                            <i data-lucide="book-open" class="w-5 h-5"></i> 
+                            <span data-i18n="eligTeacher">女教师支持对象</span>
+                        </h3>
+                        <ul class="space-y-3" id="eligTeacherListContainer">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-8 rounded-2xl bg-[#F4ECD8] border border-[#E8DCC4]">
+                <h3 class="text-2xl font-serif font-bold mb-6" data-i18n="mechTitle">运作与评选机制</h3>
+                <ul class="space-y-5" id="mechListContainer">
+                    <!-- Populated by JS -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section: Expected Impact -->
+        <section class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-[#E8DCC4]">
+            <h2 class="text-3xl font-serif font-bold mb-4 text-center" data-i18n="impactTitle">预期学术与社会影响</h2>
+            <div class="w-12 h-1 bg-[#C93B2B] mx-auto mb-10"></div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-6">
+                    <p class="text-lg" data-i18n="impactP1">基于已有研究，女性教育投资具有显著的乘数效应：</p>
+                    <blockquote class="border-l-4 border-[#4C7B36] pl-6 italic bg-[#FDFBF7] py-4 pr-4 rounded-r-lg leading-relaxed">
+                        <span data-i18n="impactQ1">"每增加一年女性受教育年限，其未来收入可提升约 10–20%。"</span>
+                        <footer class="text-sm font-normal text-[#7A6354] mt-2 block">— World Bank, 2018</footer>
+                    </blockquote>
+                    <blockquote class="border-l-4 border-[#4C7B36] pl-6 italic bg-[#FDFBF7] py-4 pr-4 rounded-r-lg leading-relaxed">
+                        <span data-i18n="impactQ2">"女性受教育程度提高与儿童健康水平提升、人口增长率下降显著相关。"</span>
+                        <footer class="text-sm font-normal text-[#7A6354] mt-2 block">— Schultz, 2002, Journal of Economic Perspectives</footer>
+                    </blockquote>
+                </div>
+                
+                <div class="bg-[#4C7B36] text-white p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="sprout" class="w-6 h-6"></i> 
+                        <span data-i18n="impactSub">在马赛马拉地区，预计将：</span>
+                    </h3>
+                    <ul class="space-y-5" id="impactListContainer">
+                        <!-- Populated by JS -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Support Us -->
+        <section id="support" class="bg-[#4C7B36] text-white rounded-3xl p-8 md:p-12 shadow-sm border border-[#3A6028] relative overflow-hidden scroll-mt-24">
+            <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-serif font-bold mb-6 flex items-center gap-3">
+                        <i data-lucide="heart-handshake" class="text-[#F4ECD8] w-9 h-9"></i> 
+                        <span data-i18n="supportUsTitle">支持我们</span>
+                    </h2>
+                    <div class="w-12 h-1 bg-[#F4ECD8] mb-8"></div>
+                    <p class="text-lg leading-relaxed mb-6" data-i18n="supportDesc1">
+                        HWF 栖息地守望者基金会 (Habitat Watcher Foundation) 是在加州成立的非盈利组织，致力于野生动物栖息地的保护和恢复，让当地社区获得持续收益，实现可持续发展。
+                    </p>
+                    <p class="text-[#E8DCC4] italic text-base border-l-4 border-[#C93B2B] pl-4 leading-relaxed" data-i18n="supportDesc2">
+                        您的每一份捐赠，都将直接用于“狮子奖学金”项目，化作马赛马拉孩子们走向未来的基石。
+                    </p>
+                </div>
+                
+                <div class="bg-[#FDFBF7] text-[#4A3B32] p-6 sm:p-8 rounded-2xl shadow-lg border border-[#E8DCC4]">
+                    <h3 class="text-xl font-bold mb-6 text-[#C93B2B] flex items-center gap-2">
+                        <i data-lucide="landmark" class="w-6 h-6"></i> 
+                        <span data-i18n="accountTitle">公益捐赠账户</span>
+                    </h3>
+                    <div class="space-y-4 font-mono text-sm">
+                        <div>
+                            <div class="text-xs text-[#7A6354] font-sans font-bold uppercase mb-1">Account Title</div>
+                            <div class="font-bold text-base">HABITAT WATCHER FOUNDATION</div>
+                        </div>
+                        <div class="h-px bg-[#E8DCC4] my-2"></div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="col-span-2">
+                                <div class="text-xs text-[#7A6354] font-sans font-bold uppercase mb-1">Account Number</div>
+                                <div class="font-bold text-xl text-[#4C7B36] tracking-wider break-all">325041036637</div>
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <div class="text-xs text-[#7A6354] font-sans font-bold uppercase mb-1">Bank Routing Number</div>
+                                <div class="font-bold break-all">121000358</div>
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <div class="text-xs text-[#7A6354] font-sans font-bold uppercase mb-1">Bank Swift Code</div>
+                                <div class="font-bold break-all">BOFAUS3N</div>
+                            </div>
+                        </div>
+                        <div class="h-px bg-[#E8DCC4] my-2"></div>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="text-xs text-[#7A6354] font-sans font-bold uppercase mb-1">Bank Name & Address</div>
+                                <div class="font-bold mb-1">BANK OF AMERICA</div>
+                                <div class="text-xs break-words">1501 NOGALES ST. ROWLAND HEIGHTS, CA91748</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-[#7A6354] font-sans font-bold uppercase mb-1">Organization Address</div>
+                                <div class="text-xs break-words">5430 Via Rene, Yorba Linda, 92886</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Call to Action Footer -->
+    <div class="bg-[#F4ECD8] border-t border-b border-[#E8DCC4] py-16 text-center px-6">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-serif font-bold mb-6 text-[#C93B2B]" data-i18n="ctaTitle">加入倡议，共同守护</h2>
+            <p class="text-lg mb-8 text-[#5A4B42] leading-relaxed" data-i18n="ctaDesc">
+                在非洲草原，狮子不仅象征力量，更象征责任与守护。“狮子奖学金”不仅是一项教育资助计划，更是一项连接人与自然、现在与未来的长期行动。 我们诚挚邀请全球志同道合的伙伴加入这一倡议，共同点亮更多孩子的未来，也守护这片孕育生命的土地。
+            </p>
+            <button class="bg-[#4C7B36] text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-[#3d632b] transition-colors inline-flex items-center gap-2">
+                <span data-i18n="ctaBtn">从马赛马拉出发，让教育改变命运</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Publisher & Founder Info -->
+    <footer class="bg-[#2C241E] text-[#D8CFC4] py-16 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+            
+            <!-- Organization Info -->
+            <div>
+                <h3 class="text-white text-2xl font-serif font-bold mb-4" data-i18n="footerOrg">发布机构</h3>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-[#4C7B36] rounded-lg flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                        M
+                    </div>
+                    <div>
+                        <h4 class="text-white text-lg font-bold" data-i18n="footerOrgName">马拉野保学院</h4>
+                        <p class="text-sm text-[#A89F91]" data-i18n="footerOrgSub">Mara Wildlife Conservation Academy</p>
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed mb-6" data-i18n="footerOrgDesc">
+                    致力于野生动物行为研究、化解人兽冲突、保护和恢复野生动物栖息地，并为全球华人参与非洲野保行动搭建专业桥梁。
+                </p>
+                <div class="border-t border-[#4A3B32] pt-6">
+                    <h4 class="text-white font-bold mb-3" data-i18n="footerFollow">关注我们</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-[#C93B2B]"></span>
+                            <span data-i18n="socialXhs">小红书：</span><span class="text-white" data-i18n="socialXhsId">星巴野保日记</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-[#4C7B36]"></span>
+                            <span data-i18n="socialWechat">微信视频号：</span><span class="text-white" data-i18n="socialWechatId">星巴野保探险家</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Founder Bio -->
+            <div class="bg-[#1E1814] p-8 rounded-2xl border border-[#3A2D25]">
+                <h3 class="text-white text-xl font-serif font-bold mb-4 border-b border-[#3A2D25] pb-2" data-i18n="footerFounderTitle">关于创始人</h3>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <div class="flex-1">
+                        <h4 class="text-lg font-bold text-white mb-1" data-i18n="footerFounderName">星巴 (Simba Qiang Zhuo)</h4>
+                        <p class="text-[#4C7B36] text-sm font-semibold mb-3" data-i18n="footerFounderSub">马拉野保学院创始人 · 野生动物保护探险家</p>
+                        <p class="text-sm leading-relaxed mb-4" data-i18n="footerFounderDesc">
+                            星巴是一位常年扎根在肯尼亚马赛马拉的中国探险家。他致力于研究野生动物行为，化解人兽冲突，保护和恢复野生动物栖息地，并积极连接全球华人参与非洲的野保行动。
+                        </p>
+                        <p class="text-sm italic text-[#A89F91] border-l-2 border-[#C93B2B] pl-3 leading-relaxed" data-i18n="footerFounderQuote">
+                            "他的标志性装扮是戴着 safari 牛仔帽，穿着绿色户外服，披着红色马赛族披风，与狮子等野生动物长年相伴。"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="max-w-5xl mx-auto mt-12 pt-8 border-t border-[#3A2D25] text-center text-sm text-[#8A7D70]">
+            <p>© <span id="currentYear"></span> <span data-i18n="copyright">马拉野保学院 & HWF栖息地守望者基金会. All rights reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Translations & Logic -->
+    <script>
+        // Set dynamic year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Dictionary
+        const content = {
+            zh: {
+                navTitle: "狮子奖学金",
+                supportBtn: "支持我们",
+                heroInitiative: "HWF栖息地守望者基金会倡议",
+                heroTitle: "“狮子奖学金”项目",
+                heroSubtitle: "Lion Scholarship Initiative",
+                heroQuote: "“让每一个孩子像狮子一样勇敢成长，以能力承担责任，以责任守护世界。”",
+                heroQuoteSub: "— From the Mara, for the future of the Earth.",
+                founders: "发起人:",
+                founderNames: "星巴 (Simba), 曹筱玲, Ashley Qu, Simon Masago, 陈雪景",
+                maraTitle: "走近马赛马拉：生态奇迹与人文发展的交汇",
+                maraP1: "马赛马拉（Maasai Mara）位于肯尼亚西南部，包括马赛马拉国家保护区和周边的私人保护区，是全球最具标志性的草原生态系统，也是地球上大型哺乳动物最集中的栖息地。这里不仅是壮观的“动物大迁徙”的舞台，更生息着包括非洲狮、大象、黑犀牛在内的大量旗舰物种和濒危生命。",
+                maraP2: "然而，马赛马拉不仅属于野生动物，也是马赛人（Maasai）世代繁衍生息的家园。这个古老的游牧民族身披标志性的红色披风，有着深厚的自然敬畏之心，几百年来与这片大草原上的野生动物保持着微妙的共存关系。",
+                maraChalTitle: "保护与发展的现实挑战",
+                maraChalP1: "随着现代化的冲击、气候变化以及人口的快速增长，人地矛盾与人兽冲突（Human-Wildlife Conflict）日益凸显。许多马赛家庭面临着极大的生存与经济压力。要实现真正的生态可持续，单纯的“圈地保护”已不再适用。",
+                maraChalP2: "唯有通过教育赋权，提升当地社区特别是下一代的知识水平与生存技能，才能从根本上打破贫困，让原住民成为这片土地最坚定的守护者。这也正是“狮子奖学金”扎根于此的初衷。",
+                bgTitle: "项目背景与设立意义",
+                bgP1: "在马赛马拉这一全球最具生物多样性的生态系统之一，野生动物保护与社区发展始终呈现高度耦合关系。",
+                bgP2: "大量学术研究表明，教育水平的提升，尤其是女性教育的普及，是降低贫困、改善公共健康及促进生态保护的关键因素。",
+                bgP3: "然而，在马赛社区，受限于经济条件与传统观念，许多具备学习潜力的儿童（尤其是女学生）仍然面临辍学风险。同时，女性教师在乡村教育体系中的比例不足，进一步限制了教育质量与性别平等的发展。在此背景下，“狮子奖学金”项目应运而生。",
+                sdgTitle: "对应联合国可持续发展目标 (SDGs) 的详细路径",
+                sdg4_sub: "优质教育", sdg4: "项目核心抓手，通过为贫困但品学兼优的学生提供经济资助，提升马赛社区基础与中等教育的公平与质量。",
+                sdg5_sub: "性别平等", sdg5: "重点倾斜资助女学生，并积极支持女性教师就业，全面提升当地女性的赋权水平与社会经济地位。",
+                sdg1_sub: "无贫穷", sdg1: "通过优质教育显著改善当地年轻人的长期收入能力，从根本上打破贫困的代际传递，间接促进减贫。",
+                sdg15_sub: "陆地生物", sdg15: "将生态环保理念融入教育体系，培养社区保护意识，直接支持马赛马拉生态系统与野生动物的保护目标。",
+                sdg13_sub: "气候行动", sdg13: "通过长期的生态保护教育，增强下一代对自然环境的理解，从而提升应对气候变化的认知与行动能力。",
+                sdg17_sub: "伙伴关系", sdg17: "依托全球合作网络，凝聚全球华人社区等多方力量，共同打造跨国界的生态与社会协同保护机制。",
+                visionTitle: "项目愿景与目标",
+                visionDesc: "以“狮子”为精神象征，培育下一代具有责任感、知识能力与生态意识的青年守护者，使教育成为连接社区发展与野生动物保护的核心桥梁。",
+                obj1Title: "1. 教育支持",
+                obj1Desc: "为家境贫困但品行端正、热爱学习的学生提供持续性的经济资助，重点支持女学生完成基础与中等教育。",
+                obj2Title: "2. 女性赋权",
+                obj2Desc: "通过资助符合条件的女性教师就业，提升乡村教育体系质量，同时增强女性在社区中的社会与经济地位。",
+                obj3Title: "3. 生态意识培养",
+                obj3Desc: "将野生动物保护理念融入教育体系，培养学生对自然环境的理解与责任感，形成长期的保护文化。",
+                eligTitle: "资助对象与评选标准",
+                eligStudent: "学生资助对象",
+                eligStudentList: ['来自经济困难家庭', '具备良好品德与学习态度', '有明确继续接受教育的意愿', '优先考虑女学生 (Gender Priority)'],
+                eligTeacher: "女教师支持对象",
+                eligTeacherList: ['心地善良', '具备基本教学资格', '愿意长期服务于马赛社区教育体系', '具备传播生态保护理念的能力'],
+                mechTitle: "运作与评选机制",
+                mechList: [
+                '每年评选一次，由创始人评定审核。',
+                '根据奖学金资金池规模确定资助人数与额度。',
+                '面向国际社会（尤其是华人社区）募集资金，建立长期稳定的基金池。',
+                '实行年度财务公开透明管理机制，并提供项目成效定期报告。',
+                '探索与生态旅游、公益品牌及教育项目结合，形成长期资金循环可持续模式。'
+                ],
+                impactTitle: "预期学术与社会影响",
+                impactP1: "基于已有研究，女性教育投资具有显著的乘数效应：",
+                impactQ1: "\"每增加一年女性受教育年限，其未来收入可提升约 10–20%。\"",
+                impactQ2: "\"女性受教育程度提高与儿童健康水平提升、人口增长率下降显著相关。\"",
+                impactSub: "在马赛马拉地区，预计将：",
+                impactList: ['提升基础教育入学率与完成率', '增强女性在社区中的话语权', '间接减少对自然资源的过度依赖，从而促进生态保护'],
+                supportUsTitle: "支持我们",
+                supportDesc1: "HWF 栖息地守望者基金会 (Habitat Watcher Foundation) 是在加州成立的非盈利组织，致力于野生动物栖息地的保护和恢复，让当地社区获得持续收益，实现可持续发展。",
+                supportDesc2: "您的每一份捐赠，都将直接用于“狮子奖学金”项目，化作马赛马拉孩子们走向未来的基石。",
+                accountTitle: "公益捐赠账户",
+                ctaTitle: "加入倡议，共同守护",
+                ctaDesc: "在非洲草原，狮子不仅象征力量，更象征责任与守护。“狮子奖学金”不仅是一项教育资助计划，更是一项连接人与自然、现在与未来的长期行动。 我们诚挚邀请全球志同道合的伙伴加入这一倡议，共同点亮更多孩子的未来，也守护这片孕育生命的土地。",
+                ctaBtn: "从马赛马拉出发，让教育改变命运",
+                footerOrg: "发布机构",
+                footerOrgName: "马拉野保学院",
+                footerOrgSub: "Mara Wildlife Conservation Academy",
+                footerOrgDesc: "致力于野生动物行为研究、化解人兽冲突、保护和恢复野生动物栖息地，并为全球华人参与非洲野保行动搭建专业桥梁。",
+                footerFollow: "关注我们",
+                socialXhs: "小红书：",
+                socialXhsId: "星巴野保日记",
+                socialWechat: "微信视频号：",
+                socialWechatId: "星巴野保探险家",
+                footerFounderTitle: "关于创始人",
+                footerFounderName: "星巴 (Simba Qiang Zhuo)",
+                footerFounderSub: "马拉野保学院创始人 · 野生动物保护探险家",
+                footerFounderDesc: "星巴是一位常年扎根在肯尼亚马赛马拉的中国探险家。他致力于研究野生动物行为，化解人兽冲突，保护和恢复野生动物栖息地，并积极连接全球华人参与非洲的野保行动。",
+                footerFounderQuote: "\"他的标志性装扮是戴着 safari 牛仔帽，穿着绿色户外服，披着红色马赛族披风，与狮子等野生动物长年相伴。\"",
+                copyright: "马拉野保学院 & HWF栖息地守望者基金会. All rights reserved."
+            },
+            en: {
+                navTitle: "Lion Scholarship",
+                supportBtn: "Support Us",
+                heroInitiative: "Habitat Watcher Foundation Initiative",
+                heroTitle: "Lion Scholarship Project",
+                heroSubtitle: "Empowering the Next Generation",
+                heroQuote: "\"Let every child grow bravely like a lion, shoulder responsibilities with their abilities, and protect the world with their responsibilities.\"",
+                heroQuoteSub: "— From the Mara, for the future of the Earth.",
+                founders: "Founders:",
+                founderNames: "Simba (Qiang Zhuo), Xiaoling Cao, Ashley Qu, Simon Masago, Xuejing Chen",
+                maraTitle: "Discover the Maasai Mara: A Convergence of Ecological Wonder & Human Development",
+                maraP1: "The Maasai Mara in southwestern Kenya, comprising the National Reserve and surrounding private conservancies, is one of the world's most iconic grassland ecosystems. As the stage for the Great Migration, it hosts an incredible density of large mammals, including flagship species like African lions, elephants, and black rhinos.",
+                maraP2: "However, the Mara belongs not only to wildlife but also to the Maasai people. This ancient pastoralist community, with their iconic red shukas and deep reverence for nature, has maintained a delicate coexistence with the wildlife of these plains for centuries.",
+                maraChalTitle: "The Realities of Conservation and Development",
+                maraChalP1: "With modernization, climate change, and rapid population growth, human-wildlife conflict and land-use tensions have escalated. Many Maasai families face severe economic pressures. For true ecological sustainability, isolated 'fortress conservation' is no longer viable.",
+                maraChalP2: "Only through educational empowerment—enhancing the knowledge and life skills of the local community, especially the next generation—can we fundamentally break the cycle of poverty and empower indigenous people to become the staunchest protectors of this land. This is the foundational vision of the Lion Scholarship.",
+                bgTitle: "Background & Significance",
+                bgP1: "In the Maasai Mara, one of the world's most biodiverse ecosystems, wildlife conservation and community development are deeply intertwined.",
+                bgP2: "Extensive academic research shows that improving education, especially female education, is key to reducing poverty, improving public health, and promoting ecological conservation.",
+                bgP3: "Yet, constrained by economic hardship and traditional beliefs, many children with learning potential (especially girls) in Maasai communities face a high risk of dropping out. The underrepresentation of female teachers further limits educational quality and gender equality. Thus, the Lion Scholarship was born.",
+                sdgTitle: "Alignment with UN Sustainable Development Goals (SDGs)",
+                sdg4_sub: "Quality Education", sdg4: "The core focus. By providing financial aid to disadvantaged, high-achieving students, we improve equity and quality in basic and secondary education in the Maasai community.",
+                sdg5_sub: "Gender Equality", sdg5: "Prioritizing female students and supporting female teacher employment, comprehensively enhancing women's empowerment and socio-economic status.",
+                sdg1_sub: "No Poverty", sdg1: "Quality education significantly improves long-term earning potential, fundamentally breaking the intergenerational transmission of poverty.",
+                sdg15_sub: "Life on Land", sdg15: "Integrating ecological concepts into education fosters community conservation awareness, directly supporting the Maasai Mara ecosystem.",
+                sdg13_sub: "Climate Action", sdg13: "Long-term ecological education enhances the next generation's understanding of the natural environment, boosting climate change awareness and action.",
+                sdg17_sub: "Partnerships", sdg17: "Leveraging a global network, particularly the global Chinese community, to build a transnational mechanism for ecological and social protection.",
+                visionTitle: "Vision & Objectives",
+                visionDesc: "Using the 'Lion' as a spiritual symbol, we nurture a new generation of responsible, capable, and ecologically aware youth guardians, making education the core bridge between community development and wildlife conservation.",
+                obj1Title: "1. Education Support",
+                obj1Desc: "Provide continuous financial assistance to economically disadvantaged, studious students of good character, with a focus on helping girls complete their education.",
+                obj2Title: "2. Women Empowerment",
+                obj2Desc: "Fund eligible female teachers to improve rural education quality while enhancing women's social and economic status in the community.",
+                obj3Title: "3. Ecological Awareness",
+                obj3Desc: "Integrate wildlife conservation into the curriculum, cultivating students' understanding and responsibility toward nature for a lasting conservation culture.",
+                eligTitle: "Eligibility & Selection Criteria",
+                eligStudent: "Student Eligibility",
+                eligStudentList: ['From an economically disadvantaged family', 'Demonstrates good character and study attitude', 'Clear willingness to continue education', 'Priority given to female students (Gender Priority)'],
+                eligTeacher: "Female Teacher Eligibility",
+                eligTeacherList: ['Kind-hearted', 'Holds basic teaching qualifications', 'Willing to serve the Maasai community education system long-term', 'Capable of spreading ecological conservation values'],
+                mechTitle: "Operation & Selection Mechanism",
+                mechList: [
+                'Annual selection reviewed and approved by the founders.',
+                'Number of recipients and funding amounts determined by the scholarship pool.',
+                'Funds raised internationally (especially from the global Chinese community) to build a stable, long-term fund.',
+                'Implementation of transparent annual financial management and regular impact reports.',
+                'Exploring sustainable funding models combining eco-tourism, charity branding, and educational programs.'
+                ],
+                impactTitle: "Expected Academic & Social Impact",
+                impactP1: "Based on existing research, investing in female education has a significant multiplier effect:",
+                impactQ1: "\"Each additional year of schooling for girls increases their future earnings by 10–20%.\"",
+                impactQ2: "\"Improved female education is significantly correlated with better child health and lower population growth rates.\"",
+                impactSub: "In the Maasai Mara region, we expect to:",
+                impactList: ['Increase primary education enrollment and completion rates', 'Amplify women\'s voices within the community', 'Indirectly reduce over-reliance on natural resources, thereby promoting ecological conservation'],
+                supportUsTitle: "Support Us",
+                supportDesc1: "The Habitat Watcher Foundation (HWF) is a California-based non-profit organization dedicated to the protection and restoration of wildlife habitats, enabling local communities to gain sustainable benefits.",
+                supportDesc2: "Every donation you make will go directly to the Lion Scholarship project, becoming a stepping stone for the children of the Maasai Mara toward a brighter future.",
+                accountTitle: "Charitable Donation Account",
+                ctaTitle: "Join the Initiative, Protect Together",
+                ctaDesc: "On the African savanna, the lion symbolizes not only power but also responsibility and guardianship. The Lion Scholarship is more than an educational grant; it is a long-term action connecting humanity with nature, and the present with the future. We sincerely invite like-minded partners worldwide to join this initiative, light up more children's futures, and protect this life-giving land.",
+                ctaBtn: "Start from the Mara, Let Education Change Destinies",
+                footerOrg: "Published By",
+                footerOrgName: "Mara Wildlife Conservation Academy",
+                footerOrgSub: "Bridging Communities and Conservation",
+                footerOrgDesc: "Dedicated to wildlife behavior research, resolving human-wildlife conflict, restoring habitats, and building a professional bridge for the global Chinese community to participate in African wildlife conservation.",
+                footerFollow: "Follow Us",
+                socialXhs: "Xiaohongshu: ",
+                socialXhsId: "Simba's Wildlife Diary",
+                socialWechat: "WeChat Video: ",
+                socialWechatId: "Simba the Wildlife Explorer",
+                footerFounderTitle: "About the Founder",
+                footerFounderName: "Simba (Qiang Zhuo)",
+                footerFounderSub: "Founder · Wildlife Conservation Explorer",
+                footerFounderDesc: "Simba is a Chinese explorer permanently based in the Maasai Mara, Kenya. He is dedicated to studying wildlife behavior, mitigating human-wildlife conflict, and restoring habitats, actively connecting the global Chinese community with African conservation efforts.",
+                footerFounderQuote: "\"His signature look includes a safari cowboy hat, green outdoor gear, and a red Maasai shuka, spending his days alongside lions and other wildlife.\"",
+                copyright: "Mara Wildlife Conservation Academy & Habitat Watcher Foundation. All rights reserved."
+            }
+        };
+
+        let currentLang = 'zh';
+
+        // Helper to render dynamic lists
+        function renderLists() {
+            const data = content[currentLang];
+            
+            // Student Eligibility
+            document.getElementById('eligStudentListContainer').innerHTML = data.eligStudentList.map(item => `
+                <li class="flex items-start gap-3 leading-relaxed">
+                    <i data-lucide="shield-check" class="mt-1 text-[#C93B2B] flex-shrink-0 w-[18px] h-[18px]"></i>
+                    <span>${item}</span>
+                </li>
+            `).join('');
+
+            // Teacher Eligibility
+            document.getElementById('eligTeacherListContainer').innerHTML = data.eligTeacherList.map(item => `
+                <li class="flex items-start gap-3 leading-relaxed">
+                    <i data-lucide="shield-check" class="mt-1 text-[#C93B2B] flex-shrink-0 w-[18px] h-[18px]"></i>
+                    <span>${item}</span>
+                </li>
+            `).join('');
+
+            // Mechanism List
+            document.getElementById('mechListContainer').innerHTML = data.mechList.map((item, index) => `
+                <li class="flex gap-4 leading-relaxed">
+                    <div class="font-bold text-[#4C7B36]">0${index + 1}</div>
+                    <div>${item}</div>
+                </li>
+            `).join('');
+
+            // Impact List
+            document.getElementById('impactListContainer').innerHTML = data.impactList.map(item => `
+                <li class="flex items-start gap-3">
+                    <div class="w-2 h-2 bg-[#F4ECD8] rounded-full mt-2.5 flex-shrink-0"></div>
+                    <span class="text-lg leading-relaxed">${item}</span>
+                </li>
+            `).join('');
+            
+            // Re-initialize lucide icons for newly added DOM elements
+            lucide.createIcons();
+        }
+
+        // Toggle Language function
+        function setLanguage(lang) {
+            currentLang = lang;
+            const data = content[currentLang];
+            
+            // Update simple text elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if(data[key]) {
+                    el.innerText = data[key];
+                }
+            });
+
+            // Update HTML document language
+            document.documentElement.lang = currentLang;
+
+            // Render Dynamic Lists
+            renderLists();
+
+            // Update Toggle Button text
+            document.getElementById('langLabel').innerText = currentLang === 'zh' ? 'EN' : '中';
+        }
+
+        // Event Listener
+        document.getElementById('langToggleBtn').addEventListener('click', () => {
+            const nextLang = currentLang === 'zh' ? 'en' : 'zh';
+            setLanguage(nextLang);
+        });
+
+        // Initialize icons and content on load
+        lucide.createIcons();
+        setLanguage('zh');
+
+    </script>
+</body>
+</html>
