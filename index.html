@@ -9,7 +9,6 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Custom font if desired, fallback to system fonts matching React's font-sans */
         body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
         .font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
     </style>
@@ -55,7 +54,7 @@
                 <div class="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full shadow-sm">
                     <i data-lucide="users" class="w-4 h-4 text-[#4C7B36]"></i>
                     <span class="font-semibold" data-i18n="founders">发起人:</span> 
-                    <span data-i18n="founderNames">星巴 (Qiang Zhuo), 曹筱玲, Ashley Jiayue Qu, Simon Masago, 陈雪景</span>
+                    <span data-i18n="founderNames">星巴 (Simba), 曹筱玲, Ashley Qu, Simon Masago, 陈雪景</span>
                 </div>
             </div>
         </div>
@@ -112,51 +111,39 @@
                         <span data-i18n="sdgTitle">对应联合国可持续发展目标 (SDGs) 的详细路径</span>
                     </h3>
                     <div class="grid sm:grid-cols-2 gap-4">
-                        <!-- SDG 4 -->
                         <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
                             <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
-                                <span>SDG 4</span>
-                                <span class="text-[#7A6354] text-sm" data-i18n="sdg4_sub">优质教育</span>
+                                <span>SDG 4</span> <span class="text-[#7A6354] text-sm" data-i18n="sdg4_sub">优质教育</span>
                             </div>
                             <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg4">项目核心抓手，通过为贫困但品学兼优的学生提供经济资助，提升马赛社区基础与中等教育的公平与质量。</p>
                         </div>
-                        <!-- SDG 5 -->
                         <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
                             <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
-                                <span>SDG 5</span>
-                                <span class="text-[#7A6354] text-sm" data-i18n="sdg5_sub">性别平等</span>
+                                <span>SDG 5</span> <span class="text-[#7A6354] text-sm" data-i18n="sdg5_sub">性别平等</span>
                             </div>
                             <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg5">重点倾斜资助女学生，并积极支持女性教师就业，全面提升当地女性的赋权水平与社会经济地位。</p>
                         </div>
-                        <!-- SDG 1 -->
                         <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
                             <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
-                                <span>SDG 1</span>
-                                <span class="text-[#7A6354] text-sm" data-i18n="sdg1_sub">无贫穷</span>
+                                <span>SDG 1</span> <span class="text-[#7A6354] text-sm" data-i18n="sdg1_sub">无贫穷</span>
                             </div>
                             <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg1">通过优质教育显著改善当地年轻人的长期收入能力，从根本上打破贫困的代际传递，间接促进减贫。</p>
                         </div>
-                        <!-- SDG 15 -->
                         <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
                             <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
-                                <span>SDG 15</span>
-                                <span class="text-[#7A6354] text-sm" data-i18n="sdg15_sub">陆地生物</span>
+                                <span>SDG 15</span> <span class="text-[#7A6354] text-sm" data-i18n="sdg15_sub">陆地生物</span>
                             </div>
                             <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg15">将生态环保理念融入教育体系，培养社区保护意识，直接支持马赛马拉生态系统与野生动物的保护目标。</p>
                         </div>
-                        <!-- SDG 13 -->
                         <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
                             <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
-                                <span>SDG 13</span>
-                                <span class="text-[#7A6354] text-sm" data-i18n="sdg13_sub">气候行动</span>
+                                <span>SDG 13</span> <span class="text-[#7A6354] text-sm" data-i18n="sdg13_sub">气候行动</span>
                             </div>
                             <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg13">通过长期的生态保护教育，增强下一代对自然环境的理解，从而提升应对气候变化的认知与行动能力。</p>
                         </div>
-                        <!-- SDG 17 -->
                         <div class="bg-white p-4 rounded-lg border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow">
                             <div class="font-bold text-[#4C7B36] mb-2 flex items-center gap-2">
-                                <span>SDG 17</span>
-                                <span class="text-[#7A6354] text-sm" data-i18n="sdg17_sub">伙伴关系</span>
+                                <span>SDG 17</span> <span class="text-[#7A6354] text-sm" data-i18n="sdg17_sub">伙伴关系</span>
                             </div>
                             <p class="text-sm text-[#5A4B42] m-0 leading-relaxed" data-i18n="sdg17">依托全球合作网络，凝聚全球华人社区等多方力量，共同打造跨国界的生态与社会协同保护机制。</p>
                         </div>
@@ -176,7 +163,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Obj 1 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-[#E8DCC4] hover:shadow-md transition-shadow">
                     <div class="w-14 h-14 rounded-full bg-[#F4ECD8] flex items-center justify-center mb-6">
                         <i data-lucide="graduation-cap" class="text-[#4C7B36] w-7 h-7"></i>
@@ -184,7 +170,6 @@
                     <h3 class="text-xl font-bold mb-3" data-i18n="obj1Title">1. 教育支持</h3>
                     <p class="text-[#7A6354] leading-relaxed" data-i18n="obj1Desc">为家境贫困但品行端正、热爱学习的学生提供持续性的经济资助，重点支持女学生完成基础与中等教育。</p>
                 </div>
-                <!-- Obj 2 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-[#E8DCC4] hover:shadow-md transition-shadow">
                     <div class="w-14 h-14 rounded-full bg-[#F4ECD8] flex items-center justify-center mb-6">
                         <i data-lucide="heart" class="text-[#4C7B36] w-7 h-7"></i>
@@ -192,7 +177,6 @@
                     <h3 class="text-xl font-bold mb-3" data-i18n="obj2Title">2. 女性赋权</h3>
                     <p class="text-[#7A6354] leading-relaxed" data-i18n="obj2Desc">通过资助符合条件的女性教师就业，提升乡村教育体系质量，同时增强女性在社区中的社会与经济地位。</p>
                 </div>
-                <!-- Obj 3 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-[#E8DCC4] hover:shadow-md transition-shadow">
                     <div class="w-14 h-14 rounded-full bg-[#F4ECD8] flex items-center justify-center mb-6">
                         <i data-lucide="tree-pine" class="text-[#4C7B36] w-7 h-7"></i>
@@ -212,31 +196,21 @@
                 <div class="space-y-8">
                     <div>
                         <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-[#4C7B36]">
-                            <i data-lucide="target" class="w-5 h-5"></i> 
-                            <span data-i18n="eligStudent">学生资助对象</span>
+                            <i data-lucide="target" class="w-5 h-5"></i> <span data-i18n="eligStudent">学生资助对象</span>
                         </h3>
-                        <ul class="space-y-3" id="eligStudentListContainer">
-                            <!-- Populated by JS -->
-                        </ul>
+                        <ul class="space-y-3" id="eligStudentListContainer"></ul>
                     </div>
-                    
                     <div>
                         <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-[#4C7B36]">
-                            <i data-lucide="book-open" class="w-5 h-5"></i> 
-                            <span data-i18n="eligTeacher">女教师支持对象</span>
+                            <i data-lucide="book-open" class="w-5 h-5"></i> <span data-i18n="eligTeacher">女教师支持对象</span>
                         </h3>
-                        <ul class="space-y-3" id="eligTeacherListContainer">
-                            <!-- Populated by JS -->
-                        </ul>
+                        <ul class="space-y-3" id="eligTeacherListContainer"></ul>
                     </div>
                 </div>
             </div>
-
             <div class="p-8 rounded-2xl bg-[#F4ECD8] border border-[#E8DCC4]">
                 <h3 class="text-2xl font-serif font-bold mb-6" data-i18n="mechTitle">运作与评选机制</h3>
-                <ul class="space-y-5" id="mechListContainer">
-                    <!-- Populated by JS -->
-                </ul>
+                <ul class="space-y-5" id="mechListContainer"></ul>
             </div>
         </section>
 
@@ -248,48 +222,41 @@
             </div>
             
             <div class="relative border-l-4 border-[#E8DCC4] ml-6 md:ml-12 space-y-12">
-                <!-- Timeline Item 1 -->
                 <div class="relative pl-8 md:pl-12">
                     <div class="absolute -left-[26px] top-0 w-12 h-12 bg-[#F4ECD8] rounded-full border-4 border-[#4C7B36] flex items-center justify-center">
                         <i data-lucide="lightbulb" class="w-5 h-5 text-[#4C7B36]"></i>
                     </div>
-                    <div class="bg-white p-6 rounded-xl border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow relative before:absolute before:top-4 before:-left-3 before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-[#E8DCC4] before:rotate-45">
+                    <div class="bg-white p-6 rounded-xl border border-[#E8DCC4] shadow-sm relative before:absolute before:top-4 before:-left-3 before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-[#E8DCC4] before:rotate-45">
                         <span class="text-sm font-bold text-[#C93B2B] mb-2 block tracking-wider" data-i18n="tlYear1">2010年</span>
                         <h4 class="text-xl font-bold mb-3 text-[#4A3B32]" data-i18n="tlTitle1">倡议萌芽与实地调研</h4>
-                        <p class="text-[#7A6354] leading-relaxed" data-i18n="tlDesc1">星巴(Qiang Zhuo)在马赛马拉深入当地社区，了解到人兽冲突背后的贫困根源，开始探索如何通过帮助社区提高教育和福利水平来促进野生动物保护。</p>
+                        <p class="text-[#7A6354] leading-relaxed" data-i18n="tlDesc1">星巴在马赛马拉深入当地社区，了解到人兽冲突背后的贫困根源，开始探索如何通过帮助社区提高教育和福利水平来促进野生动物保护。</p>
                     </div>
                 </div>
-
-                <!-- Timeline Item 2 -->
                 <div class="relative pl-8 md:pl-12">
                     <div class="absolute -left-[26px] top-0 w-12 h-12 bg-[#F4ECD8] rounded-full border-4 border-[#4C7B36] flex items-center justify-center">
                         <i data-lucide="building-2" class="w-5 h-5 text-[#4C7B36]"></i>
                     </div>
-                    <div class="bg-white p-6 rounded-xl border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow relative before:absolute before:top-4 before:-left-3 before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-[#E8DCC4] before:rotate-45">
+                    <div class="bg-white p-6 rounded-xl border border-[#E8DCC4] shadow-sm relative before:absolute before:top-4 before:-left-3 before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-[#E8DCC4] before:rotate-45">
                         <span class="text-sm font-bold text-[#C93B2B] mb-2 block tracking-wider" data-i18n="tlYear2">2015年</span>
                         <h4 class="text-xl font-bold mb-3 text-[#4A3B32]" data-i18n="tlTitle2">非营利组织设立与全球募资</h4>
-                        <p class="text-[#7A6354] leading-relaxed" data-i18n="tlDesc2">星巴(Qiang Zhuo)与刘赋和曹筱玲在加州创立HWF栖息地守望者基金会，正式建立专项奖学金基金池，并向全球华人社区发起募捐倡议。</p>
+                        <p class="text-[#7A6354] leading-relaxed" data-i18n="tlDesc2">星巴与刘赋和曹筱玲在加州创立HWF栖息地守望者基金会，正式建立专项奖学金基金池，并向全球华人社区发起募捐倡议。</p>
                     </div>
                 </div>
-
-                <!-- Timeline Item 3 -->
                 <div class="relative pl-8 md:pl-12">
                     <div class="absolute -left-[26px] top-0 w-12 h-12 bg-[#F4ECD8] rounded-full border-4 border-[#4C7B36] flex items-center justify-center">
                         <i data-lucide="award" class="w-5 h-5 text-[#4C7B36]"></i>
                     </div>
-                    <div class="bg-white p-6 rounded-xl border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow relative before:absolute before:top-4 before:-left-3 before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-[#E8DCC4] before:rotate-45">
+                    <div class="bg-white p-6 rounded-xl border border-[#E8DCC4] shadow-sm relative before:absolute before:top-4 before:-left-3 before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-[#E8DCC4] before:rotate-45">
                         <span class="text-sm font-bold text-[#C93B2B] mb-2 block tracking-wider" data-i18n="tlYear3">2026年</span>
                         <h4 class="text-xl font-bold mb-3 text-[#4A3B32]" data-i18n="tlTitle3">首期资金捐赠到位</h4>
                         <p class="text-[#7A6354] leading-relaxed" data-i18n="tlDesc3">2026年4月30日，Ashley Jiayue Qu向狮子奖学金计划捐赠了2000美元，项目组正式启动。</p>
                     </div>
                 </div>
-
-                <!-- Timeline Item 4 -->
                 <div class="relative pl-8 md:pl-12">
                     <div class="absolute -left-[26px] top-0 w-12 h-12 bg-[#F4ECD8] rounded-full border-4 border-[#4C7B36] flex items-center justify-center">
                         <i data-lucide="rocket" class="w-5 h-5 text-[#4C7B36]"></i>
                     </div>
-                    <div class="bg-white p-6 rounded-xl border border-[#E8DCC4] shadow-sm hover:shadow-md transition-shadow relative before:absolute before:top-4 before:-left-3 before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-[#E8DCC4] before:rotate-45">
+                    <div class="bg-white p-6 rounded-xl border border-[#E8DCC4] shadow-sm relative before:absolute before:top-4 before:-left-3 before:w-3 before:h-3 before:bg-white before:border-l before:border-b before:border-[#E8DCC4] before:rotate-45">
                         <span class="text-sm font-bold text-[#C93B2B] mb-2 block tracking-wider" data-i18n="tlYear4">未来展望</span>
                         <h4 class="text-xl font-bold mb-3 text-[#4A3B32]" data-i18n="tlTitle4">持续扩大生态守护网络</h4>
                         <p class="text-[#7A6354] leading-relaxed" data-i18n="tlDesc4">计划扩大资助规模，探索自然教育与环保公益的结合，打造跨越国界的生态与人文协同发展典范。</p>
@@ -321,9 +288,7 @@
                         <i data-lucide="sprout" class="w-6 h-6"></i> 
                         <span data-i18n="impactSub">在马赛马拉地区，预计将：</span>
                     </h3>
-                    <ul class="space-y-5" id="impactListContainer">
-                        <!-- Populated by JS -->
-                    </ul>
+                    <ul class="space-y-5" id="impactListContainer"></ul>
                 </div>
             </div>
         </section>
@@ -340,9 +305,29 @@
                     <p class="text-lg leading-relaxed mb-6" data-i18n="supportDesc1">
                         HWF 栖息地守望者基金会 (Habitat Watcher Foundation) 是在加州成立的非盈利组织，致力于野生动物栖息地的保护和恢复，让当地社区获得持续收益，实现可持续发展。
                     </p>
-                    <p class="text-[#E8DCC4] italic text-base border-l-4 border-[#C93B2B] pl-4 leading-relaxed" data-i18n="supportDesc2">
-                        您的每一份捐赠，都将直接用于“狮子奖学金”项目，化作马赛马拉孩子们走向美好未来的基石。
+                    <p class="text-[#E8DCC4] italic text-base border-l-4 border-[#C93B2B] pl-4 leading-relaxed mb-8" data-i18n="supportDesc2">
+                        您的每一份捐赠，都将直接用于“狮子奖学金”项目，化作马赛马拉孩子们走向未来的基石。
                     </p>
+
+                    <!-- Monthly Donation Card -->
+                    <div class="bg-[#FDFBF7] text-[#4A3B32] p-6 rounded-2xl shadow-lg border border-[#E8DCC4] flex flex-col sm:flex-row items-center gap-6">
+                        <div class="flex-1 text-center sm:text-left">
+                            <h3 class="text-xl font-bold mb-2 text-[#C93B2B] flex items-center justify-center sm:justify-start gap-2">
+                                <i data-lucide="calendar-heart" class="w-6 h-6"></i>
+                                <span data-i18n="monthlyTitle">月捐计划</span>
+                            </h3>
+                            <div class="text-2xl font-bold text-[#4C7B36] mb-2" data-i18n="monthlyPrice">$16 / 月</div>
+                            <p class="text-sm text-[#5A4B42] leading-relaxed m-0" data-i18n="monthlyDesc">
+                                每月捐出外出吃一顿饭的钱，即可支持到我们的狮子奖学金项目。
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0 w-full sm:w-auto">
+                            <a href="https://buy.stripe.com/aFaaEX0C53uB2qJ8DF4Ja00" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 bg-[#C93B2B] text-white px-6 py-3 rounded-full font-bold hover:bg-[#a83224] transition-colors shadow-sm">
+                                <span data-i18n="monthlyBtn">立即订阅</span>
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="bg-[#FDFBF7] text-[#4A3B32] p-6 sm:p-8 rounded-2xl shadow-lg border border-[#E8DCC4]">
@@ -350,6 +335,8 @@
                         <i data-lucide="landmark" class="w-6 h-6"></i> 
                         <span data-i18n="accountTitle">公益捐赠账户</span>
                     </h3>
+                    
+                    <!-- Bank Account Info -->
                     <div class="space-y-4 font-mono text-sm">
                         <div>
                             <div class="text-xs text-[#7A6354] font-sans font-bold uppercase mb-1">Account Title</div>
@@ -382,7 +369,10 @@
                                 <div class="text-xs break-words">5430 Via Rene, Yorba Linda, 92886</div>
                             </div>
                         </div>
+                        
                         <div class="h-px bg-[#E8DCC4] my-3"></div>
+                        
+                        <!-- Zelle Info -->
                         <div class="bg-[#F4ECD8] p-5 rounded-lg border border-[#E8DCC4] flex flex-col sm:flex-row items-center justify-between gap-6">
                             <div class="w-full text-center sm:text-left">
                                 <div class="text-xs text-[#7A6354] font-sans font-bold uppercase mb-1" data-i18n="zelleTitle">Zelle 转款方式</div>
@@ -396,9 +386,11 @@
                                 </div>
                             </div>
                             <div class="flex-shrink-0 bg-white p-2 rounded-xl shadow-sm border border-[#E8DCC4]">
-                                <img src="6875.JPG" alt="Zelle QR Code" class="w-28 h-28 object-contain rounded-lg mx-auto" onerror="this.src='https://placehold.co/200x200?text=Zelle+QR+Code'" />
+                                <!-- Fallback placeholder if image not found in the same folder -->
+                                <img src="6875.JPG" onerror="this.src='https://placehold.co/200x200?text=Zelle+QR'" alt="Zelle QR Code" class="w-28 h-28 object-contain rounded-lg mx-auto" />
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -428,9 +420,7 @@
             <div>
                 <h3 class="text-white text-2xl font-serif font-bold mb-4" data-i18n="footerOrg">发布机构</h3>
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-10 h-10 bg-[#4C7B36] rounded-lg flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                        M
-                    </div>
+                    <div class="w-10 h-10 bg-[#4C7B36] rounded-lg flex items-center justify-center text-white font-bold text-xl flex-shrink-0">M</div>
                     <div>
                         <h4 class="text-white text-lg font-bold" data-i18n="footerOrgName">马拉野保学院</h4>
                         <p class="text-sm text-[#A89F91]" data-i18n="footerOrgSub">Mara Wildlife Conservation Academy</p>
@@ -462,7 +452,7 @@
                         <h4 class="text-lg font-bold text-white mb-1" data-i18n="footerFounderName">星巴 (Simba Qiang Zhuo)</h4>
                         <p class="text-[#4C7B36] text-sm font-semibold mb-3" data-i18n="footerFounderSub">马拉野保学院创始人 · 野生动物保护探险家</p>
                         <p class="text-sm leading-relaxed mb-4" data-i18n="footerFounderDesc">
-                            星巴(Qiang Zhuo)是一位常年扎根在肯尼亚马赛马拉的中国探险家。他致力于研究野生动物行为，化解人兽冲突，保护和恢复野生动物栖息地，并积极连接全球华人参与非洲的野保行动。
+                            星巴是一位常年扎根在肯尼亚马赛马拉的中国探险家。他致力于研究野生动物行为，化解人兽冲突，保护和恢复野生动物栖息地，并积极连接全球华人参与非洲的野保行动。
                         </p>
                         <p class="text-sm italic text-[#A89F91] border-l-2 border-[#C93B2B] pl-3 leading-relaxed" data-i18n="footerFounderQuote">
                             "他的标志性装扮是戴着 safari 牛仔帽，穿着绿色户外服，披着红色马赛族披风，与狮子等野生动物长年相伴。"
@@ -480,10 +470,8 @@
 
     <!-- Translations & Logic -->
     <script>
-        // Set dynamic year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Dictionary
         const content = {
             zh: {
                 navTitle: "狮子奖学金",
@@ -494,7 +482,7 @@
                 heroQuote: "“让每一个孩子像狮子一样勇敢成长，以能力承担责任，以责任守护世界。”",
                 heroQuoteSub: "— From the Mara, for the future of the Earth.",
                 founders: "发起人:",
-                founderNames: "星巴 (Qiang Zhuo), 曹筱玲, Ashley Jiayue Qu, Simon Masago, 陈雪景",
+                founderNames: "星巴 (Simba), 曹筱玲, Ashley Qu, Simon Masago, 陈雪景",
                 maraTitle: "走近马赛马拉：生态奇迹与人文发展的交汇",
                 maraP1: "马赛马拉（Maasai Mara）位于肯尼亚西南部，包括马赛马拉国家保护区和周边的私人保护区，是全球最具标志性的草原生态系统，也是地球上大型哺乳动物最集中的栖息地。这里不仅是壮观的“动物大迁徙”的舞台，更生息着包括非洲狮、大象、黑犀牛在内的大量旗舰物种和濒危生命。",
                 maraP2: "然而，马赛马拉不仅属于野生动物，也是马赛人（Maasai）世代繁衍生息的家园。这个古老的游牧民族身披标志性的红色披风，有着深厚的自然敬畏之心，几百年来与这片大草原上的野生动物保持着微妙的共存关系。",
@@ -504,7 +492,7 @@
                 bgTitle: "项目背景与设立意义",
                 bgP1: "在马赛马拉这一全球最具生物多样性的生态系统之一，野生动物保护与社区发展始终呈现高度耦合关系。",
                 bgP2: "大量学术研究表明，教育水平的提升，尤其是女性教育的普及，是降低贫困、改善公共健康及促进生态保护的关键因素。",
-                bgP3: "然而，在马赛社区，受限于经济条件与传统观念，许多具备学习潜力的儿童（尤其是女学生）仍然面临辍学风险。同时，女性教师在乡村教育体系中的比例不足，进一步限制了教育质量与性别平等的发展。在此背景下，“狮子奖学金”项目应运生。",
+                bgP3: "然而，在马赛社区，受限于经济条件与传统观念，许多具备学习潜力的儿童（尤其是女学生）仍然面临辍学风险。同时，女性教师在乡村教育体系中的比例不足，进一步限制了教育质量与性别平等的发展。在此背景下，“狮子奖学金”项目应运而生。",
                 sdgTitle: "对应联合国可持续发展目标 (SDGs) 的详细路径",
                 sdg4_sub: "优质教育", sdg4: "项目核心抓手，通过为贫困但品学兼优的学生提供经济资助，提升马赛社区基础与中等教育的公平与质量。",
                 sdg5_sub: "性别平等", sdg5: "重点倾斜资助女学生，并积极支持女性教师就业，全面提升当地女性的赋权水平与社会经济地位。",
@@ -526,28 +514,12 @@
                 eligTeacher: "女教师支持对象",
                 eligTeacherList: ['心地善良', '具备基本教学资格', '愿意长期服务于马赛社区教育体系', '具备传播生态保护理念的能力'],
                 mechTitle: "运作与评选机制",
-                mechList: [
-                '每年评选一次，由创始人评定审核。',
-                '根据奖学金资金池规模确定资助人数与额度。',
-                '面向国际社会（尤其是华人社区）募集资金，建立长期稳定的基金池。',
-                '实行年度财务公开透明管理机制，并提供项目成效定期报告。',
-                '探索与生态旅游、公益品牌及教育项目结合，形成长期资金循环可持续模式。'
-                ],
-                // Timeline Translation (ZH)
+                mechList: ['每年评选一次，由创始人评定审核。', '根据奖学金资金池规模确定资助人数与额度。', '面向国际社会（尤其是华人社区）募集资金，建立长期稳定的基金池。', '实行年度财务公开透明管理机制，并提供项目成效定期报告。', '探索与生态旅游、公益品牌及教育项目结合，形成长期资金循环可持续模式。'],
                 tlMainTitle: "发展历程",
-                tlYear1: "2010年",
-                tlTitle1: "倡议萌芽与实地调研",
-                tlDesc1: "星巴在马赛马拉深入当地社区，了解到人兽冲突背后的贫困根源，开始探索如何通过帮助社区提高教育和福利水平来促进野生动物保护。",
-                tlYear2: "2015年",
-                tlTitle2: "非营利组织设立与全球募资",
-                tlDesc2: "星巴与刘赋和曹筱玲在加州创立HWF栖息地守望者基金会，正式建立专项奖学金基金池，并向全球华人社区发起募捐倡议。",
-                tlYear3: "2026年",
-                tlTitle3: "首期资金捐赠到位",
-                tlDesc3: "2026年4月30日，Ashley Jiayue Qu向狮子奖学金计划捐赠了2000美元，项目组正式启动。",
-                tlYear4: "未来展望",
-                tlTitle4: "持续扩大生态守护网络",
-                tlDesc4: "计划扩大资助规模，探索自然教育与环保公益的结合，打造跨越国界的生态与人文协同发展典范。",
-
+                tlYear1: "2010年", tlTitle1: "倡议萌芽与实地调研", tlDesc1: "星巴在马赛马拉深入当地社区，了解到人兽冲突背后的贫困根源，开始探索如何通过帮助社区提高教育和福利水平来促进野生动物保护。",
+                tlYear2: "2015年", tlTitle2: "非营利组织设立与全球募资", tlDesc2: "星巴与刘赋和曹筱玲在加州创立HWF栖息地守望者基金会，正式建立专项奖学金基金池，并向全球华人社区发起募捐倡议。",
+                tlYear3: "2026年", tlTitle3: "首期资金捐赠到位", tlDesc3: "2026年4月30日，Ashley Jiayue Qu向狮子奖学金计划捐赠了2000美元，项目组正式启动。",
+                tlYear4: "未来展望", tlTitle4: "持续扩大生态守护网络", tlDesc4: "计划扩大资助规模，探索自然教育与环保公益的结合，打造跨越国界的生态与人文协同发展典范。",
                 impactTitle: "预期学术与社会影响",
                 impactP1: "基于已有研究，女性教育投资具有显著的乘数效应：",
                 impactQ1: "\"每增加一年女性受教育年限，其未来收入可提升约 10–20%。\"",
@@ -556,7 +528,11 @@
                 impactList: ['提升基础教育入学率与完成率', '增强女性在社区中的话语权', '间接减少对自然资源的过度依赖，从而促进生态保护'],
                 supportUsTitle: "支持我们",
                 supportDesc1: "HWF 栖息地守望者基金会 (Habitat Watcher Foundation) 是在加州成立的非盈利组织，致力于野生动物栖息地的保护和恢复，让当地社区获得持续收益，实现可持续发展。",
-                supportDesc2: "您的每一份捐赠，都将直接用于“狮子奖学金”项目，化作马赛马拉孩子们走向美好未来的基石。",
+                supportDesc2: "您的每一份捐赠，都将直接用于“狮子奖学金”项目，化作马赛马拉孩子们走向未来的基石。",
+                monthlyTitle: "月捐计划",
+                monthlyPrice: "$16 / 月",
+                monthlyDesc: "每月捐出外出吃一顿饭的钱，即可支持到我们的狮子奖学金项目。",
+                monthlyBtn: "立即订阅",
                 accountTitle: "公益捐赠账户",
                 zelleTitle: "Zelle 转款方式",
                 zelleTagLabel: "备注 (Memo):",
@@ -569,10 +545,8 @@
                 footerOrgSub: "Mara Wildlife Conservation Academy",
                 footerOrgDesc: "致力于野生动物行为研究、化解人兽冲突、保护和恢复野生动物栖息地，并为全球华人参与非洲野保行动搭建专业桥梁。",
                 footerFollow: "关注我们",
-                socialXhs: "小红书：",
-                socialXhsId: "星巴野保日记",
-                socialWechat: "微信视频号：",
-                socialWechatId: "星巴野保探险家",
+                socialXhs: "小红书：", socialXhsId: "星巴野保日记",
+                socialWechat: "微信视频号：", socialWechatId: "星巴野保探险家",
                 footerFounderTitle: "关于创始人",
                 footerFounderName: "星巴 (Simba Qiang Zhuo)",
                 footerFounderSub: "马拉野保学院创始人 · 野生动物保护探险家",
@@ -621,28 +595,12 @@
                 eligTeacher: "Female Teacher Eligibility",
                 eligTeacherList: ['Kind-hearted', 'Holds basic teaching qualifications', 'Willing to serve the Maasai community education system long-term', 'Capable of spreading ecological conservation values'],
                 mechTitle: "Operation & Selection Mechanism",
-                mechList: [
-                'Annual selection reviewed and approved by the founders.',
-                'Number of recipients and funding amounts determined by the scholarship pool.',
-                'Funds raised internationally (especially from the global Chinese community) to build a stable, long-term fund.',
-                'Implementation of transparent annual financial management and regular impact reports.',
-                'Exploring sustainable funding models combining eco-tourism, charity branding, and educational programs.'
-                ],
-                // Timeline Translation (EN)
+                mechList: ['Annual selection reviewed and approved by the founders.', 'Number of recipients and funding amounts determined by the scholarship pool.', 'Funds raised internationally (especially from the global Chinese community) to build a stable, long-term fund.', 'Implementation of transparent annual financial management and regular impact reports.', 'Exploring sustainable funding models combining eco-tourism, charity branding, and educational programs.'],
                 tlMainTitle: "History & Milestones",
-                tlYear1: "2010",
-                tlTitle1: "Initiative Inception & Field Research",
-                tlDesc1: "Simba went deep into the Maasai Mara communities, understood the root causes of poverty behind human-wildlife conflicts, and began exploring how to promote wildlife conservation by helping communities improve education and welfare.",
-                tlYear2: "2015",
-                tlTitle2: "NPO Establishment & Global Fundraising",
-                tlDesc2: "Simba, alongside Fu Liu and Xiaoling Cao, founded the Habitat Watcher Foundation (HWF) in California, officially establishing the scholarship fund pool and launching fundraising campaigns in the global Chinese community.",
-                tlYear3: "2026",
-                tlTitle3: "Initial Funding Secured",
-                tlDesc3: "On April 30, 2026, Ashley Jiayue Qu donated $2,000 to the Lion Scholarship Initiative, officially launching the project operations.",
-                tlYear4: "Future Outlook",
-                tlTitle4: "Expanding the Conservation Network",
-                tlDesc4: "We plan to expand the funding scale, explore the integration of nature education and environmental charity, and create a transnational model for ecological and humanitarian development.",
-
+                tlYear1: "2010", tlTitle1: "Initiative Inception & Field Research", tlDesc1: "Simba went deep into the Maasai Mara communities, understood the root causes of poverty behind human-wildlife conflicts, and began exploring how to promote wildlife conservation by helping communities improve education and welfare.",
+                tlYear2: "2015", tlTitle2: "NPO Establishment & Global Fundraising", tlDesc2: "Simba, alongside Fu Liu and Xiaoling Cao, founded the Habitat Watcher Foundation (HWF) in California, officially establishing the scholarship fund pool and launching fundraising campaigns in the global Chinese community.",
+                tlYear3: "2026", tlTitle3: "Initial Funding Secured", tlDesc3: "On April 30, 2026, Ashley Jiayue Qu donated $2,000 to the Lion Scholarship Initiative, officially launching the project operations.",
+                tlYear4: "Future Outlook", tlTitle4: "Expanding the Conservation Network", tlDesc4: "We plan to expand the funding scale, explore the integration of nature education and environmental charity, and create a transnational model for ecological and humanitarian development.",
                 impactTitle: "Expected Academic & Social Impact",
                 impactP1: "Based on existing research, investing in female education has a significant multiplier effect:",
                 impactQ1: "\"Each additional year of schooling for girls increases their future earnings by 10–20%.\"",
@@ -652,6 +610,10 @@
                 supportUsTitle: "Support Us",
                 supportDesc1: "The Habitat Watcher Foundation (HWF) is a California-based non-profit organization dedicated to the protection and restoration of wildlife habitats, enabling local communities to gain sustainable benefits.",
                 supportDesc2: "Every donation you make will go directly to the Lion Scholarship project, becoming a stepping stone for the children of the Maasai Mara toward a brighter future.",
+                monthlyTitle: "Monthly Giving",
+                monthlyPrice: "$16 / mo",
+                monthlyDesc: "Donate the cost of eating out once a month to support our Lion Scholarship project.",
+                monthlyBtn: "Subscribe Now",
                 accountTitle: "Charitable Donation Account",
                 zelleTitle: "Zelle Transfer",
                 zelleTagLabel: "Zelle Tag (Memo):",
@@ -664,10 +626,8 @@
                 footerOrgSub: "Bridging Communities and Conservation",
                 footerOrgDesc: "Dedicated to wildlife behavior research, resolving human-wildlife conflict, restoring habitats, and building a professional bridge for the global Chinese community to participate in African wildlife conservation.",
                 footerFollow: "Follow Us",
-                socialXhs: "Xiaohongshu: ",
-                socialXhsId: "Simba's Wildlife Diary",
-                socialWechat: "WeChat Video: ",
-                socialWechatId: "Simba the Wildlife Explorer",
+                socialXhs: "Xiaohongshu: ", socialXhsId: "Simba's Wildlife Diary",
+                socialWechat: "WeChat Video: ", socialWechatId: "Simba the Wildlife Explorer",
                 footerFounderTitle: "About the Founder",
                 footerFounderName: "Simba (Qiang Zhuo)",
                 footerFounderSub: "Founder · Wildlife Conservation Explorer",
@@ -679,79 +639,56 @@
 
         let currentLang = 'zh';
 
-        // Helper to render dynamic lists
         function renderLists() {
             const data = content[currentLang];
             
-            // Student Eligibility
             document.getElementById('eligStudentListContainer').innerHTML = data.eligStudentList.map(item => `
                 <li class="flex items-start gap-3 leading-relaxed">
                     <i data-lucide="shield-check" class="mt-1 text-[#C93B2B] flex-shrink-0 w-[18px] h-[18px]"></i>
                     <span>${item}</span>
-                </li>
-            `).join('');
+                </li>`).join('');
 
-            // Teacher Eligibility
             document.getElementById('eligTeacherListContainer').innerHTML = data.eligTeacherList.map(item => `
                 <li class="flex items-start gap-3 leading-relaxed">
                     <i data-lucide="shield-check" class="mt-1 text-[#C93B2B] flex-shrink-0 w-[18px] h-[18px]"></i>
                     <span>${item}</span>
-                </li>
-            `).join('');
+                </li>`).join('');
 
-            // Mechanism List
             document.getElementById('mechListContainer').innerHTML = data.mechList.map((item, index) => `
                 <li class="flex gap-4 leading-relaxed">
                     <div class="font-bold text-[#4C7B36]">0${index + 1}</div>
                     <div>${item}</div>
-                </li>
-            `).join('');
+                </li>`).join('');
 
-            // Impact List
             document.getElementById('impactListContainer').innerHTML = data.impactList.map(item => `
                 <li class="flex items-start gap-3">
                     <div class="w-2 h-2 bg-[#F4ECD8] rounded-full mt-2.5 flex-shrink-0"></div>
                     <span class="text-lg leading-relaxed">${item}</span>
-                </li>
-            `).join('');
+                </li>`).join('');
             
-            // Re-initialize lucide icons for newly added DOM elements
             lucide.createIcons();
         }
 
-        // Toggle Language function
         function setLanguage(lang) {
             currentLang = lang;
             const data = content[currentLang];
             
-            // Update simple text elements
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if(data[key]) {
-                    el.innerText = data[key];
-                }
+                if(data[key]) { el.innerText = data[key]; }
             });
 
-            // Update HTML document language
             document.documentElement.lang = currentLang;
-
-            // Render Dynamic Lists
             renderLists();
-
-            // Update Toggle Button text
             document.getElementById('langLabel').innerText = currentLang === 'zh' ? 'EN' : '中';
         }
 
-        // Event Listener
         document.getElementById('langToggleBtn').addEventListener('click', () => {
-            const nextLang = currentLang === 'zh' ? 'en' : 'zh';
-            setLanguage(nextLang);
+            setLanguage(currentLang === 'zh' ? 'en' : 'zh');
         });
 
-        // Initialize icons and content on load
         lucide.createIcons();
         setLanguage('zh');
-
     </script>
 </body>
 </html>
